@@ -7,24 +7,24 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = AO_StreamingAO
+TARGET = AO_StaticAO
 TEMPLATE = app
 
-INCLUDEPATH += ../../../inc/bdaqctrl.h
+INCLUDEPATH += ../../inc/bdaqctrl.h
            	   
 
 SOURCES += configuredialog.cpp\
 		   main.cpp\
-		   streamingao.cpp\
+		   staticao.cpp\
 
 HEADERS += configuredialog.h\
-           streamingao.h\
+           staticao.h\
            ../common/WaveformGenerator.h\
 
 FORMS   += configuredialog.ui \ 
-		   streamingao.ui
+		   staticao.ui
 
-RESOURCES += streamingao.qrc
+RESOURCES += staticao.qrc
 
 CONFIG += debug_and_release
 

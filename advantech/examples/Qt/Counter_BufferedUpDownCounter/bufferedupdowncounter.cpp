@@ -3,8 +3,6 @@
 #include <QListWidget>
 #include <QListWidgetItem>
 #include "bufferedupdowncounter.h"
-#include <QButtonGroup>
-
 
 BufferedUpdownCounter::BufferedUpdownCounter(QWidget *parent, Qt::WindowFlags flags)
 	: QDialog(parent, flags)

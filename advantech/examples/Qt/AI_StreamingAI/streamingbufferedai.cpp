@@ -3,8 +3,6 @@
 #include <QPalette>
 #include <QWidget>
 #include <qmath.h>
-#include <QButtonGroup>
-
 
 AI_StreamingBufferedAi::AI_StreamingBufferedAi(QDialog *parent, Qt::WindowFlags flags)
 	: QDialog(parent, flags)

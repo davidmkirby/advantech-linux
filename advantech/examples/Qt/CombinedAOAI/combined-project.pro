@@ -1,30 +1,32 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-04-26
+# Project created for combined Analog Input and Output
 #
 #-------------------------------------------------
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = AO_StreamingAO
+TARGET = AO_AI_Combined
 TEMPLATE = app
 
-INCLUDEPATH += ../../../inc/bdaqctrl.h
+INCLUDEPATH += ../../inc/bdaqctrl.h
            	   
 
 SOURCES += configuredialog.cpp\
-		   main.cpp\
-		   streamingao.cpp\
+           main.cpp\
+           combinedaoai.cpp\
+           ../common/simplegraph.cpp
 
 HEADERS += configuredialog.h\
-           streamingao.h\
+           combinedaoai.h\
+           ../common/simplegraph.h\
            ../common/WaveformGenerator.h\
 
 FORMS   += configuredialog.ui \ 
-		   streamingao.ui
+           combinedaoai.ui
 
-RESOURCES += streamingao.qrc
+RESOURCES += aoairesources.qrc
 
 CONFIG += debug_and_release
 

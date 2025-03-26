@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = AI_StreamingAI
 TEMPLATE = app
 
-INCLUDEPATH += ../../inc/bdaqctrl.h
+INCLUDEPATH += ../../../inc/bdaqctrl.h
            	   
 
 SOURCES += configuredialog.cpp\

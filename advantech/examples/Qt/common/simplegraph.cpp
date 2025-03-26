@@ -2,6 +2,8 @@
 #include <math.h>
 #include <QPainter>
 #include <QMessageBox>
+#include <QString>
+
 using namespace std;
 
 
@@ -325,9 +327,9 @@ void SimpleGraph::GetXCordRange(QString *rangeStrs,
 		rangeMin /= 1000;
 	}
 
-	rangeStrs[0].sprintf("%g", rangeMax);
+	rangeStrs[0] = QString::asprintf("%g", rangeMax);
 	rangeStrs[0] += spted_unit[tm_unit_idx];
-	rangeStrs[1].sprintf("%g", rangeMin);
+	rangeStrs[1] = QString::asprintf("%g", rangeMin);
 	rangeStrs[1] += spted_unit[tm_unit_idx];
 }
 
@@ -345,9 +347,9 @@ void SimpleGraph::GetYCordRange(QString *rangeStrs,
 		index = 8;
 	}
 
-	rangeStrs[0].sprintf("%g", rangeMax);
+	rangeStrs[0] = QString::asprintf("%g", rangeMax);
 	rangeStrs[0] += spted_unit[index];
-	rangeStrs[1].sprintf("%g", rangeMin);
+	rangeStrs[1] = QString::asprintf("%g", rangeMin);
 	rangeStrs[1] += spted_unit[index];
 	rangeStrs[2] = (rangeMax == -rangeMin) ? tr("0") : tr("");
 }
@@ -364,9 +366,9 @@ void SimpleGraph::GetYCordRange(QString *rangeStrs,
 		index = 3;
 	}
 
-	rangeStrs[0].sprintf("%g", rangeMax);
+	rangeStrs[0] = QString::asprintf("%g", rangeMax);
 	rangeStrs[0] += spted_unit[index];
-	rangeStrs[1].sprintf("%g", rangeMin);
+	rangeStrs[1] = QString::asprintf("%g", rangeMin);
 	rangeStrs[0] += spted_unit[index];
 	rangeStrs[2] = (rangeMax == - rangeMin) ? tr("0") : tr("");
 }

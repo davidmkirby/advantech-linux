@@ -1,7 +1,5 @@
 #include "streamingao.h"
 #include <QMessageBox>
-#include <QButtonGroup>
-
 
 StreamingAO::StreamingAO(QWidget *parent, Qt::WindowFlags flags)
 	: QDialog(parent, flags)
@@ -44,10 +42,7 @@ StreamingAO::StreamingAO(QWidget *parent, Qt::WindowFlags flags)
 
 	connect(ui.btnConfigure, SIGNAL(clicked()), this, SLOT(ButtonConfigureClicked()));
 	connect(ui.btnStart, SIGNAL(clicked()), this, SLOT(ButtonStartClicked()));
-	connect(buttonGroup1,
-		static_cast<void(QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked),
-		this,
-		&StreamingAO::WaveButtonClicked);
+	connect(buttonGroup1, SIGNAL(buttonClicked(int)), this, SLOT(WaveButtonClicked(int)));
 	connect(this, SIGNAL(stophandle()), this, SLOT(stopped()));
 	connect(this, SIGNAL(underrunhandle()), this, SLOT(underrunned()));
 }
